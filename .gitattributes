@@ -1,0 +1,8 @@
+# fbp filter should be a script that does this:
+#
+# tail -c +2 "$1" | base64 -d | pigz -d | python -m json.tool
+#
+# Configure with:
+#
+# git config --global diff.fbp.textconv "/path/to/fbp/filter/script"
+*.fbp filter=fbp diff=fbp
